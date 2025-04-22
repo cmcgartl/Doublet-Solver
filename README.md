@@ -1,10 +1,10 @@
-Doublet Game Solver (Word Ladder)
+# Doublet Game Solver (Word Ladder)
 
-##Overview
+## Overview
 This is a c++ implementation of the doublet game using A* search via a priority queue implemented by a Min Heap. 
 Given a start word and end word as input, the program will print the shortest sequence of words that solves the game
 
-##Doublet
+## Doublet
 Doublet is a game in which the player is provided a dictionary of words (word bank), from which a start word and goal word are selected.
 The point of the game is to transform the start word into the goal word by only changing one letter at a time, and to do this with the least number of transformations possible.
 Each letter change must produce a word that exists in the dictionary.
@@ -14,13 +14,13 @@ Cold -> Cord -> Card -> Ward -> Warm
 Note at each step, only one letter is changed and produces a new valid word
 For example, the move Cold -> Card is not valid, as two letters are changed in one step.
 
-##Features: 
+## Features: 
 1. Uses A* search algorithm to find the optimal path
 2. Implements a Min Heap to serve as a priority queue
 3. Creates a graph with a node for each word, edges between words that form a valid move
 4. Prints the path of the optimal solution
 
-##How it works:
+## How it works:
 1. The program reads in a text file containing the list of words. The file contains the number of words in the file on its own line at the top of the file. Each word in the dictionary is then listed on its own line
 
 2. The program creates a graph with a node for each word, and an edge between words that form a valid transformation
@@ -33,7 +33,7 @@ For example, the move Cold -> Card is not valid, as two letters are changed in o
 
 5. Once a solution is found, the program traces back through each words' recorded optimal predecessor to generate the solution path
 
-##How to Run
+## How to Run
 1. Copy the repository URL and run git clone <url>, then cd to the cloned repository folder
 2. use make to compile the program with the provided make file
 3. Use the provided text file or create your own test file that follows the required format as follows:
